@@ -54,23 +54,6 @@ const AddLecturer = () => {
         }
     })
 
-    const navData = [
-        {
-            id: 1,
-            name: "TimeTable > ",
-            pathname: "/",
-        },
-        {
-            id: 2,
-            name: "lecturer > ",
-            pathname: "/lecturer/view",
-        },
-        {
-            id: 3,
-            name: "Add Lecturer",
-            pathname: "/lecturer/add",
-        },
-    ];
 
         return (
 
