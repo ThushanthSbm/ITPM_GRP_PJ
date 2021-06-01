@@ -3,25 +3,6 @@
   object-fit: contain;
   padding: 15px;
   background-color: white;
-  margin-top: 10px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  max-height: 80vh;
-}
-.ViewNotAllocated__searchList {
-  width: 30vw;
-}
-.cardStyle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.ViewNotAllocated > div {
-  margin-top: 10px;
-}
-
-.ViewNotAllocated::-webkit-scrollbar {
   display: none;
 }
 .ViewNotAllocated button {
