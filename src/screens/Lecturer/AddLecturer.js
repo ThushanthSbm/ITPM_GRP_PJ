@@ -22,20 +22,18 @@ const AddLecturer = () => {
 
     const [buildingData,setBuildingData] = useState([]);
 
-   
+    useEffect(() => {
+        dispatch(viewBuilding());
+    }, []);
 
-    const formik = useFormik({
-        initialValues : {
-            name : '',
-            title :'',
-            emp_id:0,
-            faculty : '',
-            department:'',
-            center:'',
-            building:'',
-            level:0,
-            rank:0
-        },
+    useEffect(() => {
+        setBuildingData(building);
+    }, [building]);
+
+    console.log(buildingData);
+
+
+  
         onSubmit :(inputs) =>{
             formik.values.name = formik.values.title + "." + formik.values.name;
             formik.values.rank = formik.values.level + "." + formik.values.emp_id;
