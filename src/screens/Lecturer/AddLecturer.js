@@ -158,7 +158,36 @@ const AddLecturer = () => {
                                                     </select>
                                              ):formik.values.center == "Kandy" ? (
                                                         <select className="form-control" onChange={formik.handleChange} name="faculty" value={formik.values.faculty} required>
-                 
+                                                            <option value="">None</option>
+                                                            <option value="Computing">Computing</option>
+                                                            <option value="Business">Business</option>
+                                                        </select>
+                                                 ):(
+                                                            <select className="form-control" onChange={formik.handleChange} name="faculty" value={formik.values.faculty} disabled>
+                                                                <option value="">None</option>
+                                                            </select>
+                                                            )
+                                    }
+
+                            </div>
+
+                            <div className="lecturer_inputs">
+
+                                <label htmlFor="department">Department</label>
+                                    {
+                                        formik.values.center == "Malabe" ?(
+                                            formik.values.faculty == "Computing" ?(
+                                                    <select className="form-control" onChange={formik.handleChange}  name="department" value={formik.values.department} required>
+                                                        <option value="">None</option>
+                                                        <option value="Information Technology">Information Technology</option>
+                                                        <option value="Computer science & software engineering">Computer science & software engineering</option>
+                                                        <option value="Networking">Networking</option>
+                                                        <option value="Data Science">Data Science</option>
+                                                        <option value="Interactive media">Interactive media</option>
+                                                    </select>
+
+
+                                                )
 
                                                 : formik.values.faculty == "Engineering" ?
                                                 (
