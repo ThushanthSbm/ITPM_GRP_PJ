@@ -5,16 +5,6 @@
   overflow: hidden;
 }
 
-.NotAllocated__box {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.NotAllocated__message {
   height: 30px;
 }
 
