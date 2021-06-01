@@ -203,7 +203,27 @@ const AddLecturer = () => {
 
                                                 :formik.values.faculty == "Business" ?
                                                     (
-          
+                                                        <select className="form-control" onChange={formik.handleChange}  name="department" value={formik.values.department} required>
+                                                            <option value="">None</option>
+                                                            <option value="a">a</option>
+                                                            <option value="b">b</option>
+                                                            <option value="c">c</option>
+                                                            <option value="d">d</option>
+                                                        </select>
+                                                    )
+                                                    :formik.values.faculty == "Humanity science" ?
+                                                        (
+                                                            <select className="form-control" onChange={formik.handleChange}  name="department" value={formik.values.department} required>
+
+                                                                <option value="">None</option>
+                                                                <option value="Nursing">Nursing</option>
+                                                                <option value="y">y</option>
+                                                                <option value="z">z</option>
+                                                                <option value="w">w</option>
+                                                            </select>
+                                                        )
+                                                        :
+                                                        (
                                                             <select className="form-control" onChange={formik.handleChange} name="department" value={formik.values.department} disabled>
                                                                 <option value="">None</option>
                                                             </select>
