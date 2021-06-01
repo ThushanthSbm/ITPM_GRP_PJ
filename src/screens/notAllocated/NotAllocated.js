@@ -11,11 +11,7 @@ import { view_genSubGroupId } from "../../redux/gensubId/genSubIdAction";
 import NotAllocatedForm from "./NotAllocatedForm";
 import ViewNotAllocated from "./ViewNotAllocated";
 
-const NotAllocated = () => {
-  const [sessionData, setSessionData] = useState([]);
-  const [lectures, setLectures] = useState([]);
-  const [groupId, setGroupId] = useState([]);
-  const [subgroupId, setSubgroupId] = useState([]);
+
 
   const dispatch = useDispatch();
 
