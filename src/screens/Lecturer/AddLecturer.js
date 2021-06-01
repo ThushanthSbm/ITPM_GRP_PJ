@@ -16,8 +16,13 @@ const AddLecturer = () => {
         (state) => state.LecturerReducer
     );
 
-   
+    const { load, err, building } = useSelector(
+        (state) => state.get_building
+    );
 
+    const [buildingData,setBuildingData] = useState([]);
+
+   
 
     const formik = useFormik({
         initialValues : {
