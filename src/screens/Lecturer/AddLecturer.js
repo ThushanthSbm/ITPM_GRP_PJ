@@ -74,7 +74,32 @@ const AddLecturer = () => {
 
         return (
 
-    
+            <div className="lecturer">
+                <ScreenNav rightNavData={navData} />
+                <div className="lecturer__container">
+                    <div className="lecturer__box">
+                        <div className="lead text-success lecturer__message">
+                            {loading && clicked && <Spinner Loader={DotLoader} size={30} />}
+                            <p className={`lead ${error ? "text-danger" : "text-success"}`}>
+                                {!loading && !error && success}
+                                {!loading && error && error}
+                            </p>
+                        </div>
+                        <h2 className="text-center text-dark">Add Lecturer</h2>
+                        <form id="myForm" onSubmit={formik.handleSubmit} autoComplete="off">
+
+                            <div className="lecturer_inputs">
+                                <label htmlFor="title">Select Title</label>
+                                <select className="form-control"
+                                        onChange={formik.handleChange}
+                                        name="title"
+                                        value={formik.values.title}>
+                                            <option>Select</option>
+                                            <option value="Mr">Mr</option>
+                                            <option value="Ms">Ms</option>
+                                            <option value="Mrs">Mrs</option>
+                                </select>
+                            </div>
 
                             <div className="lecturer_inputs">
                                 <label htmlFor="name">Name</label>
