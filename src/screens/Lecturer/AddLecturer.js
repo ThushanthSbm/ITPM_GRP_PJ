@@ -45,15 +45,7 @@ const AddLecturer = () => {
             level:0,
             rank:0
         },
-        onSubmit :(inputs) =>{
-            formik.values.name = formik.values.title + "." + formik.values.name;
-            formik.values.rank = formik.values.level + "." + formik.values.emp_id;
-            console.log(inputs)
-            isClicked(true);
-            dispatch(addLecturer(inputs));
-        }
-    })
-
+     
     const navData = [
         {
             id: 1,
