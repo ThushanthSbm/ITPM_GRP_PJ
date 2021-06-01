@@ -343,62 +343,7 @@ const AddLecturer = () => {
                                                                     <option value="">None</option>
                                                                 </select>
                                                             )
-                                    ) :formik.values.center =="Metro" ? (
-                                        formik.values.faculty == "Computing" ?(
-                                                                <select className="form-control" onChange={formik.handleChange}  name="building" value={formik.values.building} required>
-                                                                    <option value="">None</option>
-                                                                    <option value="Main building">Main building</option>
-                                                                    <option value="A building">A building</option>
-                                                                </select>
-
-                                                            )
-
-
-                                                            :formik.values.faculty == "Business" ?
-                                                                (
-                                                                    <select className="form-control" onChange={formik.handleChange}  name="building" value={formik.values.building} required>
-                                                                        <option value="">None</option>
-                                                                        <option value="Main building">Main building</option>
-                                                                        <option value="X building">X building</option>
-                                                                    </select>
-                                                                )
-                                                                    :
-                                                                    (
-                                                                        <select className="form-control" onChange={formik.handleChange} name="building" value={formik.values.building} disabled>
-                                                                            <option value="">None</option>
-                                                                        </select>
-                                                                    )
-                                        ) :formik.values.center =="Kandy" ?(
-                                        formik.values.faculty == "Computing" ?(
-                                                                    <select className="form-control" onChange={formik.handleChange}  name="building" value={formik.values.building} required>
-                                                                        <option value="">None</option>
-                                                                        <option value="Main building">Main building</option>
-                                                                        <option value="C building">C building</option>
-                                                                    </select>
-
-                                                                )
-
-                                                                :formik.values.faculty == "Business" ?
-                                                                    (
-                                                                        <select className="form-control" onChange={formik.handleChange}  name="building" value={formik.values.building} required>
-                                                                            <option value="">None</option>
-                                                                            <option value="Main building">Main building</option>
-                                                                            <option value="X building">X building</option>
-                                                                        </select>
-                                                                    )
-
-                                                                        :
-                                                                        (
-                                                                            <select className="form-control" onChange={formik.handleChange} name="building" value={formik.values.building} disabled>
-                                                                                <option value="">None</option>
-                                                                            </select>
-                                                                        )
-                                    ) :(
-                                                <select className="form-control" onChange={formik.handleChange} name="building" value={formik.values.building} disabled>
-                                                    <option value="">None</option>
-                                                </select>
-                                            )
-                                }
+                                   
                             </div>
 
                             <div className="lecturer_inputs">
