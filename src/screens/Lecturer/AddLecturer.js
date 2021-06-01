@@ -33,7 +33,7 @@ const AddLecturer = () => {
     console.log(buildingData);
 
 
-  
+   
         onSubmit :(inputs) =>{
             formik.values.name = formik.values.title + "." + formik.values.name;
             formik.values.rank = formik.values.level + "." + formik.values.emp_id;
