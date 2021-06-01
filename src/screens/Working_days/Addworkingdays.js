@@ -10,17 +10,6 @@ import { addWorkingdays } from "../../redux/Working_days/WorkingdaysAction";
 import ScreenNav from "../screen-nav/ScreenNav";
 import { useFormik } from "formik";
 
-const Addworkingdays = () => {
-  const history = useHistory();
-  const dispatch = useDispatch();
-  const [clicked, isClicked] = useState(false);
-  const [startTime, setStarttime] = useState("");
-  const [endTime, setEndtime] = useState("");
-  const [success, setSuccess] = useState("Successfully Added");
-  const [hrs, setHrs] = useState("");
-  const { loading, error, workingdays } = useSelector(
-    (state) => state.WorkingdaysReducer
-  );
 
   const formik = useFormik({
     initialValues: {
