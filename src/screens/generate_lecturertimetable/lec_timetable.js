@@ -17,6 +17,12 @@ import { Addlecturertimetable } from "../../redux/generate_lecturertimetable/lec
 
 const animatedComponents = makeAnimated();
 
+const Lecturertimetableadd = () => {
+  const dispatch = useDispatch();
+  const [clicked, isClicked] = useState(false);
+  const [success, setSuccess] = useState("Successfully Added!");
+  const { loading, error, lecturertimetabledata } = useSelector(
+    (state) => state.lecturertimetable_addReducer
   );
   const [lecturerData, setLecturerData] = useState([]);
   const { lod, erro, lecturer } = useSelector((state) => state.get_lecturers);
