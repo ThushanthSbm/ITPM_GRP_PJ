@@ -2,7 +2,22 @@
 
 import React, { useState, useEffect } from "react";
 import ScreenNav from "../screen-nav/ScreenNav";
-imp
+import { useDispatch, useSelector } from "react-redux";
+import { viewWorkingdays } from "../../redux/Working_days/WorkingdaysAction";
+import { DotLoader } from "react-spinners";
+import { Link } from "react-router-dom";
+import { db } from "../../firebase";
+import { useHistory } from "react-router-dom";
+import Search from "../home/Search";
+import { Spinner } from "../animations/Spinner";
+import "./Viewworkingdays.css"
+
+
+const Viewworkingdays = () => {
+   const {loading,error,workingdays } = useSelector(
+     (state) => state.get_workingdays
+   );
+
   const dispatch = useDispatch();
   const [WorkingdaysData, setWorkingdaysData] = useState([]);
   const [checkData, setCheckData] = useState([]);
