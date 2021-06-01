@@ -113,6 +113,32 @@ const AddLecturer = () => {
                                     required
                                 />
                             </div>
+
+                            <div className="lecturer_inputs">
+                                <label htmlFor="eid">Employee Id</label>
+                                <input
+                                    placeholder="000150"
+                                    name="emp_id"
+                                    type="text"
+                                    className="form-control"
+                                    pattern="[0-9]{6}"
+                                    title="Should be 6 numbers!"
+                                    value={formik.values.emp_id}
+                                    onChange={formik.handleChange}
+                                    required
+                                />
+                            </div>
+
+                            <div className="lecturer_inputs">
+                                <label htmlFor="center">Center</label>
+                                <select className="form-control" onChange={formik.handleChange} name="center" value={formik.values.center} required>
+                                    <option value="">None</option>
+                                    <option value="Malabe">Malabe</option>
+                                    <option value="Metro">Metro</option>
+                                    <option value="Kandy">Kandy</option>
+                                </select>
+                            </div>
+
                             <div className="lecturer_inputs">
                                 <label htmlFor="faculty">Faculty</label>
                                     {
