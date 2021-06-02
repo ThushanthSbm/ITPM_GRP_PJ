@@ -396,7 +396,32 @@ const AddLecturer = () => {
                                     ) :(
                                                 <select className="form-control" onChange={formik.handleChange} name="building" value={formik.values.building} disabled>
                                                     <option value="">None</option>
-                
+                                                </select>
+                                            )
+                                }
+                            </div>
+
+                            <div className="lecturer_inputs">
+
+                                <label htmlFor="level">Level</label>
+                                <select className="form-control" onChange={formik.handleChange} name="level" value={formik.values.level} required>
+                                    <option value="">None</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+
+                            <div className="lecturer_inputs">
+
+                                <label htmlFor="rank">Rank</label>
+                                <input
+                                    name="rank"
+                                    type="text"
+                                    className="form-control"
                                     value={ formik.values.level + "." + formik.values.emp_id}
                                     onChange={formik.handleChange}
                                     required
