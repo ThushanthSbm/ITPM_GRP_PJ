@@ -46,7 +46,33 @@ const GenGroupId = () => {
   ];
 
   return (
-   
+    <div className="GenGroupId">
+      <ScreenNav rightNavData={navData} />
+      <div className="GenGroupId__container">
+        <div className="GenGroupId__box">
+          {year_semister.length > 0 &&
+          student_programme.length > 0 &&
+          groupNo.length > 0 ? (
+            <React.Fragment>
+              <h2 className="text-center text-dark">Generate Group Id</h2>
+              <GenIdForm
+                year_semister={year_semister}
+                student_programme={student_programme}
+                groupNo={groupNo}
+              />
+            </React.Fragment>
+          ) : (
+            <div className="GenGroupId__loader">
+              <Spinner Loader={PropagateLoader} size={12} />
+            </div>
+          )}
+        </div>
+        <div className="GenGroupId__List">
+          <h4>GROUP ID LISTS</h4>
+          <ViewGenGroupId />
+        </div>
+      </div>
+    </div>
   );
 };
 
