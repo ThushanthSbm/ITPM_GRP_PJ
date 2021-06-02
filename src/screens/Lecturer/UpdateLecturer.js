@@ -126,7 +126,34 @@ const UpdateLecturer = (props) => {
                             </select>
                         </div>
 
-                        
+                        <div className="lecturer_inputs">
+                            <label htmlFor="faculty">Faculty</label>
+                            {
+                                center == "Malabe" ? (
+                                    <select className="form-control" onChange={(e) => setFaculty(e.target.value)} name="faculty" value={faculty} required>
+                                        <option value="">None</option>
+                                        <option value="Computing">Computing</option>
+                                        <option value="Engineering">Engineering</option>
+                                        <option value="Business">Business</option>
+                                        <option value="Humanity science">Humanity science</option>
+                                    </select>
+                                ):center == "Metro" ?(
+                                    <select className="form-control" onChange={(e) => setFaculty(e.target.value)} name="faculty" value={faculty} required>
+                                        <option value="">None</option>
+                                        <option value="Computing">Computing</option>
+                                        <option value="Business">Business</option>
+                                    </select>
+                                ):center == "Kandy" ? (
+                                    <select className="form-control" onChange={(e) => setFaculty(e.target.value)} name="faculty" value={faculty} required>
+                                        <option value="">None</option>
+                                        <option value="Computing">Computing</option>
+                                        <option value="Business">Business</option>
+                                    </select>
+                                ):(
+                                    <select className="form-control" onChange={(e) => setFaculty(e.target.value)} name="faculty" value={faculty} disabled>
+                                        <option value="">None</option>
+                                    </select>
+                                )
                             }
 
                         </div>
