@@ -40,36 +40,7 @@ const ViewLecturer = () => {
     dispatch(viewLecturer());
   }, []);
 
-  useEffect(() => {
-    setLecturerData(lecturer);
-  }, [lecturer]);
-
-  const Handlebox = (e) => {
-    if (e.target.checked) {
-      let tempData = [
-        ...checkData,
-        {
-          id: e.target.value,
-        },
-      ];
-      setCheckData(tempData);
-    } else {
-      setCheckData(checkData.filter((data) => data.id !== e.target.value));
-    }
-
-    console.log("checkData", checkData);
-  };
-
-  const DeleteAll = () => {
-    db.collection("lecturers")
-        .get()
-        .then((res) => {
-          res.forEach((element) => {
-            element.ref.delete();
-          });
-        });
-    setCheckData([]);
-  };
+ 
 
   const DeleteSelected = () => {
     checkData.map((check_data) => {
