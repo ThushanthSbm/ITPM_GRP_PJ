@@ -50,28 +50,7 @@ const UpdateLecturer = (props) => {
         console.log(name,emp_id,faculty,center,department,building,level,rank);
     }
 
-    const navData = [
-        {
-            id: 1,
-            name: "TimeTable > ",
-            pathname: "/",
-        },
-        {
-            id: 2,
-            name: "Lecturer > ",
-            pathname: "/lecturer/add",
-        },
-        {
-            id: 3,
-            name: "view > ",
-            pathname: "/lecturer/view",
-        },
-        {
-            id: 4,
-            name: "update",
-            pathname: "/lecturer/update",
-        },
-    ];
+   
 
     return (
         <div className="lecturer">
