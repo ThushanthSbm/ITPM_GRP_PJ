@@ -35,7 +35,29 @@ const Consecutive = () => {
   ];
 
   return (
-    
+    <div className="Consecutive">
+      <ScreenNav rightNavData={navData} />
+      <div className="Consecutive__container">
+        <div className="Consecutive__box">
+          {sessionData.length > 0 ? (
+            <React.Fragment>
+              <h2 className="text-center text-dark">
+                Generate Consecutive Sessions
+              </h2>
+              <ConsecutiveForm subject={session} />
+            </React.Fragment>
+          ) : (
+            <div className="Consecutive__loader">
+              <Spinner Loader={PropagateLoader} size={12} />
+            </div>
+          )}
+        </div>
+        <div className="Consecutive__List">
+          <h4>CONSECUTIVE SESSION LISTS</h4>
+          <ViewConsecutiveSession />
+        </div>
+      </div>
+    </div>
   );
 };
 
