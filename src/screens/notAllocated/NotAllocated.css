@@ -18,6 +18,17 @@
   height: 30px;
 }
 
+.NotAllocated__box > form {
+  margin: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(236, 225, 225);
+  background-color: white;
+
+  justify-content: center;
   flex-wrap: wrap;
 }
 .NotAllocated_inputs {
