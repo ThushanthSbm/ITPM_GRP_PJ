@@ -176,7 +176,42 @@ const UpdateLecturer = (props) => {
 
                                         )
 
-                                       
+                                        : faculty == "Engineering" ?
+                                        (
+                                            <select className="form-control" onChange={(e) => setDepartment(e.target.value)}  name="department" value={department} required>
+                                                <option value="">None</option>
+                                                <option value="Architecture">Architecture</option>
+                                                <option value="Civil Engineering">Civil Engineering</option>
+                                                <option value="Electronic & Telecommunication Engineering">Electronic & Telecommunication Engineering</option>
+                                                <option value="Quantity Surverying">Quantity Surverying</option>
+                                            </select>
+                                        )
+
+                                        :faculty == "Business" ?
+                                            (
+                                                <select className="form-control" onChange={(e) => setDepartment(e.target.value)}  name="department" value={department} required>
+                                                    <option value="">None</option>
+                                                    <option value="a">a</option>
+                                                    <option value="b">b</option>
+                                                    <option value="c">c</option>
+                                                    <option value="d">d</option>
+                                                </select>
+                                            )
+                                            :faculty == "Humanity science" ?
+                                                (
+                                                    <select className="form-control" onChange={(e) => setDepartment(e.target.value)}  name="department" value={department} required>
+                                                        <option value="">None</option>
+                                                        <option value="Nursing">Nursing</option>
+                                                        <option value="y">y</option>
+                                                        <option value="z">z</option>
+                                                        <option value="w">w</option>
+                                                    </select>
+                                                )
+                                                :
+                                                (
+                                                    <select className="form-control" onChange={(e) => setDepartment(e.target.value)}  name="department" value={department} disabled>
+                                                        <option value="">None</option>
+                                                    </select>
                                                 )
                                 ):center == "Metro" ?(
                                     faculty == "Computing" ?(
