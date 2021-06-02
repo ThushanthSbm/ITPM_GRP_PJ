@@ -158,7 +158,24 @@ const UpdateLecturer = (props) => {
 
                         </div>
 
-                       
+                        <div className="lecturer_inputs">
+
+                            <label htmlFor="department">Department</label>
+                            {
+                                center == "Malabe" ?(
+                                    faculty == "Computing" ?(
+                                            <select className="form-control" onChange={(e) => setDepartment(e.target.value)}  name="department" value={department} required>
+                                                <option value="">None</option>
+                                                <option value="Information Technology">Information Technology</option>
+                                                <option value="Computer science & software engineering">Computer science & software engineering</option>
+                                                <option value="Networking">Networking</option>
+                                                <option value="Data Science">Data Science</option>
+                                                <option value="Interactive media">Interactive media</option>
+                                            </select>
+
+
+                                        )
+
                                         : faculty == "Engineering" ?
                                         (
                                             <select className="form-control" onChange={(e) => setDepartment(e.target.value)}  name="department" value={department} required>
