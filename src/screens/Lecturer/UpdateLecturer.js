@@ -116,27 +116,7 @@ const UpdateLecturer = (props) => {
                             />
                         </div>
 
-                        <div className="lecturer_inputs">
-                            <label htmlFor="center">Center</label>
-                            <select className="form-control" onChange={(e) => setCenter(e.target.value)} name="center" value={center} required>
-                                <option value="">None</option>
-                                <option value="Malabe">Malabe</option>
-                                <option value="Metro">Metro</option>
-                                <option value="Kandy">Kandy</option>
-                            </select>
-                        </div>
-
-                        <div className="lecturer_inputs">
-                            <label htmlFor="faculty">Faculty</label>
-                            {
-                                center == "Malabe" ? (
-                                    <select className="form-control" onChange={(e) => setFaculty(e.target.value)} name="faculty" value={faculty} required>
-                                        <option value="">None</option>
-                                        <option value="Computing">Computing</option>
-                                        <option value="Engineering">Engineering</option>
-                                        <option value="Business">Business</option>
-                                        <option value="Humanity science">Humanity science</option>
-                                    </select>
+                        
                                 ):center == "Metro" ?(
                                     <select className="form-control" onChange={(e) => setFaculty(e.target.value)} name="faculty" value={faculty} required>
                                         <option value="">None</option>
