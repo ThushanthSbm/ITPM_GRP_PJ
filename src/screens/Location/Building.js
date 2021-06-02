@@ -67,7 +67,7 @@ const Building = () => {
             </p>
           </div>
 
-          
+          <h2 className="text-center text-dark">Add Building Name</h2>
           <form id="frm" onSubmit={formik.handleSubmit}>
             <div className="Building_inputs form-group">
               <label htmlFor="Center" className="text-light">
