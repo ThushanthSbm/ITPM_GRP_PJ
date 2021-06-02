@@ -387,42 +387,6 @@ const UpdateLecturer = (props) => {
 
                         <div className="lecturer_inputs">
 
-                            <label htmlFor="level">Level</label>
-                            <select className="form-control" onChange={(e) => setLevel(e.target.value)}  name="building" value={level} required>
-                                <option value="">None</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                        </div>
-
-                        <div className="lecturer_inputs">
-
-                            <label htmlFor="rank">Rank</label>
-                            <input
-                                name="rank"
-                                type="text"
-                                className="form-control"
-                                value={level + "." +emp_id}
-                                onChange={(e) => setRank(e.target.value)}
-                                required
-                            />
-                        </div>
-
-                        <div className="lecturer_buttons">
-                            <button type="button" className="btn">
-                                Clear
-                            </button>
-                            <button
-                                type="button"
-                                className="btn"
-                                onClick={(e) => {
-                                    history.push({ pathname: "/lecturer/view" });
-                                }}
-                            >
                                 Cancel
                             </button>
                             <button type="submit" className="btn" disabled={!emp_id}>
