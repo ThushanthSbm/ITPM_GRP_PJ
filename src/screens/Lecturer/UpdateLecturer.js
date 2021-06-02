@@ -305,52 +305,7 @@ const UpdateLecturer = (props) => {
                                             </select>
                                         )
 
-                                        :faculty == "Business" ?
-                                            (
-                                                <select className="form-control" onChange={(e) => setBuilding(e.target.value)}  name="building" value={building} required>
-
-                                                    <option value="">None</option>
-                                                    <option value="D-Block">D-Block</option>
-                                                </select>
-                                            )
-                                            :faculty == "Humanity science" ?
-                                                (
-                                                    <select className="form-control" onChange={(e) => setBuilding(e.target.value)}  name="building" value={building} required>
-
-                                                        <option value="">None</option>
-                                                        <option value="Nursing">Nursing Block</option>
-                                                    </select>
-                                                )
-                                                :
-                                                (
-                                                    <select className="form-control" onChange={(e) => setBuilding(e.target.value)}  name="building" value={building} disabled>
-                                                        <option value="">None</option>
-                                                    </select>
-                                                )
-                                ) :center =="Metro" ? (
-                                    faculty == "Computing" ?(
-                                            <select className="form-control" onChange={(e) => setBuilding(e.target.value)}  name="building" value={building} required>
-                                                <option value="">None</option>
-                                                <option value="Main building">Main building</option>
-                                                <option value="A building">A building</option>
-                                            </select>
-
-                                        )
-
-
-                                        :faculty == "Business" ?
-                                        (
-                                            <select className="form-control" onChange={(e) => setBuilding(e.target.value)}  name="building" value={building} required>
-                                                <option value="">None</option>
-                                                <option value="Main building">Main building</option>
-                                                <option value="X building">X building</option>
-                                            </select>
-                                        )
-                                        :
-                                        (
-                                            <select className="form-control" onChange={(e) => setBuilding(e.target.value)}  name="building" value={building} disabled>
-                                                <option value="">None</option>
-                                            </select>
+                                      
                                         )
                                 ) :center =="Kandy" ?(
                                     faculty == "Computing" ?(
