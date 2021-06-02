@@ -20,27 +20,7 @@ const BuildingTable = ({
         {userData.map((data) => (
           <tr key={data.id}>
             <td>
-              <div className="form-check">
-                <input
-                  onChange={(e) => Handlebox(e, data)}
-                  type="checkbox"
-                  value={data.id}
-                  className="form-check-input"
-                  checked={data.isChecked}
-                />
-                <span>{data.building}</span>
-              </div>
-            </td>
-            <td>
-              <span>{data.center}</span>
-            </td>
-            <td>
-              <button onClick={(e) => handleDelete(data)}>Delete</button>
-            </td>
-            <td>
-              <button onClick={(e) => gotoUpdatePage(data)}>Edit</button>
-            </td>
-          </tr>
+             
         ))}
       </tbody>
     </table>
