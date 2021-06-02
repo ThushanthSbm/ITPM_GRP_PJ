@@ -115,7 +115,7 @@ const BuildingUpdate = (props) => {
             </div>
             <div className="BuildingUpdate_inputs form-group">
               <label htmlFor="building" className="text-light">
-                Building
+              Building
               </label>
               <input
                 value={formik.values.building}
@@ -150,7 +150,7 @@ const BuildingUpdate = (props) => {
               <button type="button" onClick={clearInput} className="btn">
                 Clear
               </button>
-            </div>
+            </div> 
           </form>
         </div>
       </div>
