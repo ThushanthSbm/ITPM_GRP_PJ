@@ -16,7 +16,7 @@ const StudentTagTable = ({
         </tr>
       </thead>
       <tbody>
-        {userData.map((data) => (
+      {userData.map((data) => (
           <tr key={data.id}>
             <td>
               <div className="form-check">
