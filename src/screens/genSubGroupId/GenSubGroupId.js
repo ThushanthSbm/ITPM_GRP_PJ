@@ -41,27 +41,7 @@ const GenSubGroupId = () => {
   ];
 
   return (
-    <div className="GenSubGroupId">
-      <ScreenNav rightNavData={navData} />
-      <div className="GenSubGroupId__container">
-        <div className="GenSubGroupId__box">
-          {genId.length > 0 && subgroupNo.length > 0 ? (
-            <React.Fragment>
-              <h2 className="text-center text-dark">Generate Sub Group Id</h2>
-              <GenSubGroupForm gen_groupid={genId} sub_groupid={subgroupNo} />
-            </React.Fragment>
-          ) : (
-            <div className="GenSubGroupId__loader">
-              <Spinner Loader={PropagateLoader} size={12} />
-            </div>
-          )}
-        </div>
-        <div className="GenSubGroupId__List">
-          <h4>GROUP ID LISTS</h4>
-          <ViewGenSubGroupId />
-        </div>
-      </div>
-    </div>
+    
   );
 };
 
