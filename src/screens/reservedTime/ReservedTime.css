@@ -26,7 +26,10 @@
   height: 15px;
 }
 
-.Res
+.ReservedTime__box > form {
+  border: 1px solid rgb(150, 148, 148);
+  margin: 10px;
+  padding: 8px;
   border-radius: 8px;
   height: auto;
   display: flex;
