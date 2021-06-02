@@ -105,7 +105,69 @@ const SuitableGroupId = () => {
     }
   };
   return (
+    <div className="SuitableGroupId">
+      <ScreenNav rightNavData={navData} />
+      <div className="SuitableGroupId__container">
+        <div className="SuitableGroupId__box">
+          <div className="lead text-success SuitableGroupId__message">
+            {loading && clicked && <Spinner Loader={DotLoader} size={30} />}
+            <p className={`lead ${error ? "text-danger" : "text-success"}`}>
+              {!loading && !error && success}
+              {!loading && error && error}
+            </p>
+          </div>
 
+          <h2 className="text-center text-dark">Add SuitableGroupId</h2>
+          <form id="frm" onSubmit={(e) => submitHandler(e)}>
+            <div className="SuitableGroupId_inputs">
+              <label htmlFor="SuitableGroupId" className="text">
+                Category Type
+              </label>
+              <select
+                className="form-control"
+                value={type}
+                onChange={(e) => setType(e.target.value)}
+              >
+                <option value="">select</option>
+                <option value="groupId">groupId</option>
+                <option value="subGroupId">subGroupId</option>
+              </select>
+            </div>
+            <div className="SuitableGroupId_inputs">
+              <label htmlFor="SuitableGroupId" className="text">
+                groupid
+              </label>
+              <Select
+                options={setCurrentType()}
+                className="form-control"
+                classNamePrefix="select"
+                value={selectGroupId}
+                onChange={handleGroupIdChange}
+              />
+            </div>
+            <div className="SuitableGroupId_inputs">
+              <label htmlFor="SuitableGroupId" className="text">
+                rooms
+              </label>
+              <Select
+                options={room_options}
+                isMulti
+                value={selectRoom}
+                onChange={handleRoomChange}
+                name="rooms"
+                className="basic-multi-select form-control"
+                classNamePrefix="select"
+              />
+            </div>
+            <div className="SuitableGroupId_buttons">
+              <button type="submit" className="btn">
+                Add Suitable GroupId
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 };
 
