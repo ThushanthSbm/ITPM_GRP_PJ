@@ -57,58 +57,7 @@ const ViewStudentDetail = () => {
 
   const searchData = (name) => {};
   return (
-    <div className="StudentDetailContainer">
-      <div className="StudentDetailContainer__nav">
-        <ScreenNav rightNavData={navData} />
-      </div>
-      <h2 className="text-center">View Student Detail</h2>
-      <div className="StudentDetailContainer__top">
-        <form>
-          <div className="form-group student_input">
-            <label htmlFor="StudentDetailContainers">GroupBy</label>
-            <select className="form-control" id="StudentDetailContainers">
-              <option>year_semister</option>
-              <option>programme</option>
-            </select>
-          </div>
-        </form>
-        <Search searchData={searchData} />
-      </div>
-      <div className="container table-responsive-lg ">
-        <table className="table table-dark table-hover YearViewContainer__table">
-          <thead>
-            <tr>
-              <th>Year&Semister</th>
-              <th>Programme</th>
-              <th>groupId</th>
-              <th>SubGroupId</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableData.map((data, i) => (
-              <tr key={i}>
-                <td>{data.year_semi}</td>
-                <td>
-                  {data.programmes.map((pdata, j) => (
-                    <p key={j}>{pdata}</p>
-                  ))}
-                </td>
-                <td>
-                  {data.genGroup.map((pdata, j) => (
-                    <p key={j}>{pdata.gen_groupid}</p>
-                  ))}
-                </td>
-                <td>
-                  {data.genSubGroup.map((pdata, j) => (
-                    <p key={j}>{pdata.gen_subgroupid}</p>
-                  ))}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+
   );
 };
 
