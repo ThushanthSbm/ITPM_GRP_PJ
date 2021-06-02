@@ -9,32 +9,7 @@ import Search from "../home/Search";
 import { useHistory } from "react-router-dom";
 import {viewLecturer} from "../../redux/Lecturer/LecturerAction";
 
-const ViewLecturer = () => {
-  const { loading, error, lecturer } = useSelector(
-      (state) => state.get_lecturers
-  );
-  const dispatch = useDispatch();
-  const [lecturerData, setLecturerData] = useState([]);
-  const [checkData, setCheckData] = useState([]);
-  console.log("lecturers", lecturer);
-  const history = useHistory();
-  const navData = [
-    {
-      id: 1,
-      name: "TimeTable > ",
-      pathname: "/",
-    },
-    {
-      id: 2,
-      name: "Lecturer > ",
-      pathname: "/lecturer/add",
-    },
-    {
-      id: 3,
-      name: "View ",
-      pathname: "/lecturer/view",
-    }
-  ];
+
 
   useEffect(() => {
     dispatch(viewLecturer());
