@@ -11,11 +11,7 @@ const ViewNotAllocated = () => {
   const { loading, error, not_allocates } = useSelector(
     (state) => state.get_notAllocated
   );
-  //   console.log("gen_subgroupids", gen_subgroupids);
 
-  useEffect(() => {
-    dispatch(view_notAlocatedTime());
-    return () => {};
   }, []);
   useEffect(() => {
     setSession(not_allocates);
