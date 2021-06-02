@@ -34,35 +34,7 @@ const ViewConsecutiveSession = () => {
     }
   };
   return (
-    <React.Fragment>
-      <div className="GenSubGroupId__searchList">
-        <Search searchData={searchData} />
-        {consecutive_sessions.length === 0 ? (
-          <p className="text-danger lead">data is not available</p>
-        ) : sessions.length === 0 ? (
-          <p className="text-danger lead">No results found</p>
-        ) : null}
-      </div>
-      <div className="ViewConsecutiveSession">
-        {sessions.map((data, i) => (
-          <div className="card bg-dark ViewConsecutiveSession__list" key={i}>
-            <div className="card-body">
-              <h5 className="text-center text-light">{data.lecture}</h5>
-              <h5 className="text-center text-light">{data.tutorial}</h5>
-            </div>
-            <div className="ViewConsecutiveSession__buttons">
-              <button
-                onClick={() =>
-                  db.collection("consecutive_sessions").doc(data.id).delete()
-                }
-              >
-                Delete
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </React.Fragment>
+   
   );
 };
 
