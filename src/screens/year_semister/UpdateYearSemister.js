@@ -58,55 +58,7 @@ const UpdateYearSemister = (props) => {
   ];
 
   return (
-    <div className="yearSemisterUpdate">
-      <ScreenNav rightNavData={navData} />
-      <div className="yearSemisterUpdate__container">
-        <div className="yearSemisterUpdate__box">
-          <div className="lead text-success yearSemister__message">
-            {loading && clicked && <Spinner Loader={DotLoader} size={30} />}
-            <p className={`lead ${error ? "text-danger" : "text-success"}`}>
-              {!loading && !error && success}
-              {!loading && error && error}
-            </p>
-          </div>
 
-          <h2 className="text-center text-dark">Update year & Semister</h2>
-          <form id="frm" onSubmit={(e) => submitHandler(e)}>
-            <div className="yearSemisterUpdate_inputs">
-              <label htmlFor="yearSemisterUpdate" className="text">
-                year & semister
-              </label>
-              <input
-                value={year}
-                onChange={(e) => setYear(e.target.value)}
-                placeholder="eg:S1.Y3"
-                id="year_semister"
-                type="text"
-                className="form-control"
-                required
-              />
-            </div>
-            <div className="yearSemister_buttons">
-              <button type="submit" className="btn" disabled={!year}>
-                Update
-              </button>
-              <button
-                type="button"
-                className="btn"
-                onClick={(e) => {
-                  history.push({ pathname: "/student/year_semister/view" });
-                }}
-              >
-                Cancel
-              </button>
-              <button type="button" onClick={clearInput} className="btn">
-                Clear
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
   );
 };
 
