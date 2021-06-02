@@ -6,7 +6,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px;
+}
 
+.ReservedTime__box {
+  width: auto;
+  height: auto;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
