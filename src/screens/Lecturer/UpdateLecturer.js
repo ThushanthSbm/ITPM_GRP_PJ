@@ -6,7 +6,23 @@ import { useHistory } from "react-router-dom";
 import ScreenNav from "../screen-nav/ScreenNav";
 import {UpdateLecturerDetails} from "../../redux/Lecturer/LecturerAction";
 
+const UpdateLecturer = (props) => {
+    console.log("props.history", props.location);
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const [clicked, isClicked] = useState(false);
+    const [success, setSuccess] = useState("Successfully Updated!");
 
+    const { loading, error } = useSelector((state) => state.Update_lecturer);
+
+    const [name,setName] = useState('');
+    const [emp_id,setEmpID] = useState('');
+    const [faculty,setFaculty] =  useState('');
+    const [department,setDepartment] = useState('');
+    const [center,setCenter] = useState('');
+    const [building,setBuilding] =useState('')
+    const [level,setLevel] =useState(0);
+    const [rank,setRank] =useState('');
 
     useEffect(() => {
         if (!props.location.state) {
