@@ -24,7 +24,24 @@ const UpdateLecturer = (props) => {
     const [level,setLevel] =useState(0);
     const [rank,setRank] =useState('');
 
-   
+    useEffect(() => {
+        if (!props.location.state) {
+            history.replace({
+                pathname: "/lecturer/view",
+            });
+        }
+        else {
+            setName(props.location.state.name);
+            setEmpID(props.location.state.emp_id);
+            setCenter(props.location.state.center);
+            setFaculty(props.location.state.faculty);
+            setDepartment(props.location.state.department);
+            setBuilding(props.location.state.building);
+            setLevel(props.location.state.level);
+            setRank(props.location.state.rank);
+        }
+
+    }, []);
 
     const submitHandler =e =>{
         e.preventDefault();
