@@ -101,7 +101,20 @@ const UpdateLecturer = (props) => {
                             />
                         </div>
 
-                       
+                        <div className="lecturer_inputs">
+                            <label htmlFor="eid">Employee Id</label>
+                            <input
+                                placeholder="000150"
+                                name="emp_id"
+                                type="text"
+                                className="form-control"
+                                pattern="[0-9]{6}"
+                                title="Should be 6 numbers!"
+                                value={emp_id}
+                                onChange={(e) => setEmpID(e.target.value)}
+                                required
+                            />
+                        </div>
 
                         <div className="lecturer_inputs">
                             <label htmlFor="center">Center</label>
