@@ -118,7 +118,21 @@ const AddSubject = () => {
                             />
                         </div>
 
-                      
+                        <div className="subject_inputs">
+
+                            <label htmlFor="scode">Subject Code</label>
+                            <input
+                                placeholder="IT2030"
+                                name="scode"
+                                type="text"
+                                className="form-control"
+                                pattern="[A-Z]{2}[0-9]{4}"
+                                title="Should be the format(IT2030)!"
+                                value={scode}
+                                onChange={handlechangeSubCode}
+                                required
+                            />
+                        </div>
 
                         <div className="subject_inputs">
 
