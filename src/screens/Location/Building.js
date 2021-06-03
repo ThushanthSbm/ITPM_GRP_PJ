@@ -87,14 +87,7 @@ const Building = () => {
                 <option value="Metro">Metro</option>
               </select>
             </div>
-            <div className="error_div error_building">
-              {formik.errors.center && formik.touched.center ? (
-                <h6 className={"text-warning text-center"}>
-                  <i className="fas fa-exclamation"></i>
-                  {formik.errors.center}{" "}
-                </h6>
-              ) : null}
-            </div>
+            
             <div className="Building_inputs form-group">
               <label htmlFor="Building" className="text-light">
                 Building Name
