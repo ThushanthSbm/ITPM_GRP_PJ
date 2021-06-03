@@ -108,7 +108,14 @@ const Viewworkingdays = () => {
     </div>
     <div className="container table-responsive-lg ">
       {loading ? (
-        orkingdays/add",
+        <Spinner Loader={DotLoader} size={30} />
+      ) : (
+        <React.Fragment>
+          <div className="ViewContainer__top">
+            <button
+              onClick={(e) =>
+                history.push({
+                  pathname: "/workingdays/add",
                 })
               }
               className="btn btn-dark btn_new"
