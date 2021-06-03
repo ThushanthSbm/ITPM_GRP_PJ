@@ -7,7 +7,53 @@ import "./Subject.css"
 import ScreenNav from "../screen-nav/ScreenNav";
 import { addSubject } from "../../redux/Subject/SubjectAction";
 
+const AddSubject = () => {
 
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const [clicked, isClicked] = useState(false);
+    const [success, setSuccess] = useState("Successfully Added!");
+    const { loading, error, subject } = useSelector(
+        (state) => state.SubjectReducer
+    );
+
+
+    const [scode,setCode] = useState('');
+    const [sname,setName] = useState('');
+    const [off_year,setOffYear] = useState('');
+    const [off_semi,setOffSemi] = useState('');
+    const [lec_hrs,setLect] = useState('');
+    const [tut_hrs,setTutorial] = useState('');
+    const [lab_hrs,setLab] = useState('');
+    const [eval_hrs,setEvaluation] = useState('');
+
+    const handlechangeSubCode = e => {
+        setCode(e.target.value)
+    }
+
+    const handlechangeSubName = e => {
+        setName(e.target.value)
+    }
+
+    const handlechangeOffYear = e => {
+        setOffYear(e.target.value)
+    }
+
+    const handlechangeOffSemi = e => {
+        setOffSemi(e.target.value)
+    }
+
+    const handlechangeLectuer = e => {
+        setLect(e.target.value+'hrs')
+    }
+
+    const handlechangeTutorial = e => {
+        setTutorial(e.target.value+'hrs')
+    }
+
+    const handlechangeLab = e => {
+        setLab(e.target.value+'hrs')
+    }
 
     const handlechangeEvaluation = e => {
         setEvaluation(e.target.value+'hrs')
