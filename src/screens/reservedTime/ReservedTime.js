@@ -100,11 +100,7 @@ const ReservedTime = () => {
                 onChange={(e) => setTime(e.target.value)}
               />
             </div>
-            <div className="ReservedTime_buttons">
-              <button type="submit" className="btn">
-                Add Suitable Room
-              </button>
-            </div>
+            
           </form>
         </div>
       </div>
