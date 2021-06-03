@@ -72,7 +72,12 @@ const Viewworkingdays = () => {
     setCheckData([]);
   };
 
-
+  const DeleteSelected = () => {
+    checkData.map((check_data) => {
+      db.collection("workingdays").doc(check_data.id).delete();
+    });
+    setCheckData([]);
+  };
 
   const handleDelete = (data) => {
     db.collection("workingdays").doc(data.id).delete();
