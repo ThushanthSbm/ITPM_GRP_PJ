@@ -130,7 +130,16 @@ const Viewworkingdays = () => {
                <tr>
                   <th></th>
                  
-               
+                 <th>Category</th>
+                 <th>No of Days</th>
+                 <th>Working Days</th>              
+                 <th>From</th>
+                 <th>To</th>
+                 <th>No of Hours</th>
+                 <th>Time Slot</th>
+                 <th>Action</th>
+                 <th>Action</th>
+ 
                </tr>
              </thead>
              <tbody>
