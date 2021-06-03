@@ -73,24 +73,7 @@ const AddSubject = () => {
         setEvaluation("");
     }
 
-    const navData = [
-        {
-            id: 1,
-            name: "TimeTable > ",
-            pathname: "/",
-        },
-        {
-            id: 2,
-            name: "Subject > ",
-            pathname: "/subject/view",
-        },
-        {
-            id: 3,
-            name: "Add Subject",
-            pathname: "/subject/add",
-        },
-    ];
-
+   
     return (
         <div className="subject">
             <ScreenNav rightNavData={navData} />
