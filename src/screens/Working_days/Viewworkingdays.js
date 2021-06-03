@@ -120,15 +120,7 @@ const Viewworkingdays = () => {
               }
               className="btn btn-dark btn_new"
             >
-              Add new record
-            </button>
-            <Search searchData={searchData} />
-          </div>
-          {WorkingdaysData.length > 0 && (
-             <table className="table table-dark table-hover ViewContainer__table">
-             <thead>
-               <tr>
-                  <th></th>
+            
                  
                  <th>Category</th>
                  <th>No of Days</th>
