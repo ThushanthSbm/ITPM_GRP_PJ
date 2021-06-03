@@ -46,7 +46,88 @@ const ParallelForm = ({ subject }) => {
     },
   });
   return (
-   
+    <React.Fragment>
+      <div className="lead text-success ParllelSession__message">
+        {loading && clicked && <Spinner Loader={DotLoader} size={30} />}
+        <p className={`lead ${error ? "text-danger" : "text-success"}`}>
+          {!loading && !error && success}
+          {!loading && error && error}
+        </p>
+      </div>
+      <form id="frm" onSubmit={formik.handleSubmit}>
+        <div className="ParllelSession_inputs form-group">
+          <label htmlFor="duration" className="text-dark">
+            starting time
+          </label>
+          <input
+            type="time"
+            className="form-control"
+            onChange={formik.handleChange}
+            name="start_time"
+            id="start_time"
+            value={formik.values.start_time}
+          />
+        </div>
+        <ParallelSessionError
+          error={formik.errors.start_time}
+          touched={formik.touched.start_time}
+        />
+        <div className="ParllelSession_inputs form-group">
+          <label htmlFor="duration" className="text">
+            Duration
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            name="duration"
+            id="duration"
+            placeholder="eg:3hrs"
+            onChange={formik.handleChange}
+            value={formik.values.duration}
+          />
+        </div>
+        <ParallelSessionError
+          error={formik.errors.duration}
+          touched={formik.touched.duration}
+        />
+        <div className="ParllelSession_inputs form-group">
+          <label htmlFor="duration" className="text">
+            Date
+          </label>
+          <input
+            type="date"
+            className="form-control"
+            name="pdate"
+            id="pdate"
+            onChange={formik.handleChange}
+            value={formik.values.pdate}
+          />
+        </div>
+        <ParallelSessionError
+          error={formik.errors.pdate}
+          touched={formik.touched.pdate}
+        />
+        <ParallelSessionInput
+          labelName={"session"}
+          id_name={"session"}
+          formik={formik}
+          data={subject}
+          divName={"session"}
+          fvalue={formik.values.session}
+        />
+        <ParallelSessionError
+          error={formik.errors.session}
+          touched={formik.touched.session}
+        />
+        <div className="ParllelSession_buttons">
+          {subject.length > 0 && (
+            <button type="submit" className="btn">
+              Generate session
+            </button>
+          )}
+        </div>
+      </form>
+    </React.Fragment>
   );
 };
 
