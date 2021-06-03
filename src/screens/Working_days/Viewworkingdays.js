@@ -37,7 +37,10 @@ const Viewworkingdays = () => {
     },
   ];
 
- 
+  useEffect(() => {
+    dispatch(viewWorkingdays());
+  }, []);
+
   useEffect(() => {
     setWorkingdaysData(workingdays);
   }, [workingdays]);
