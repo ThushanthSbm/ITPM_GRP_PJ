@@ -85,7 +85,15 @@ const Viewworkingdays = () => {
     console.log("checkData", checkData);
   };
 
-
+  const searchData = (name) => {
+    setCheckData([]);
+    name?
+    setWorkingdaysData(
+            workingdays.filter((data) => data.name.includes(name))
+        ):setWorkingdaysData(
+        workingdays
+        )
+  };
   const gotoUpdate = (data) => {
     history.push({
       pathname: "/workingdays/update",
