@@ -79,11 +79,6 @@ const Viewworkingdays = () => {
     setCheckData([]);
   };
 
-  const handleDelete = (data) => {
-    db.collection("workingdays").doc(data.id).delete();
-    setCheckData(checkData.filter((e) => e.id !== data.id));
-    console.log("checkData", checkData);
-  };
 
   const searchData = (name) => {
     setCheckData([]);
