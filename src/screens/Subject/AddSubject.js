@@ -91,7 +91,32 @@ const AddSubject = () => {
         },
     ];
 
-   
+    return (
+        <div className="subject">
+            <ScreenNav rightNavData={navData} />
+            <div className="subject__container">
+                <div className="subject__box">
+                    <div className="lead text-success subject__message">
+                        {loading && clicked && <Spinner Loader={DotLoader} size={30} />}
+                        <p className={`lead ${error ? "text-danger" : "text-success"}`}>
+                            {!loading && !error && success}
+                            {!loading && error && error}
+                        </p>
+                    </div>
+                    <h2 className="text-center text-dark">Add subject</h2>
+                    <form id="myForm" onSubmit={infoSubmit} autoComplete="off">
+                        <div className="subject_inputs">
+                            <label htmlFor="name">Subject Name</label>
+                            <input
+                                placeholder="OOC"
+                                name="sname"
+                                type="text"
+                                className="form-control"
+                                value={sname}
+                                onChange={handlechangeSubName}
+                                required
+                            />
+                        </div>
 
                         <div className="subject_inputs">
 
