@@ -164,7 +164,20 @@ const PreferredRoom = () => {
                 onChange={handleTagChange}
               />
             </div>
-            
+            <div className="PreferredRoom_inputs">
+              <label htmlFor="PreferredRoom" className="text">
+                rooms
+              </label>
+              <Select
+                options={room_options}
+                isMulti
+                value={selectRoom}
+                onChange={handleRoomChange}
+                name="rooms"
+                className="basic-multi-select form-control"
+                classNamePrefix="select"
+              />
+            </div>
             <div className="PreferredRoom_buttons">
               <button type="submit" className="btn">
                 Add Suitable Room
