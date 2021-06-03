@@ -134,7 +134,17 @@ const AddSubject = () => {
                             />
                         </div>
 
-                        
+                        <div className="subject_inputs">
+
+                            <label htmlFor="offered_year">Offered Year</label>
+                            <select className="form-control" onChange={handlechangeOffYear} name="off_year" value={off_year} required>
+                                <option value="">None</option>
+                                <option value="Y1">Y1</option>
+                                <option value="Y2">Y2</option>
+                                <option value="Y3">Y3</option>
+                                <option value="Y4">Y4</option>
+                            </select>
+                        </div>
                         <div className="subject_inputs">
 
                             <label htmlFor="offered_semi">Offered Semester</label>
