@@ -28,3 +28,7 @@
     padding: 2px;
     cursor: pointer;
 }
+
+.ViewContainer__table button:hover {
+    background-image: linear-gradient(to right, #e72c45, #f59644);
+}
