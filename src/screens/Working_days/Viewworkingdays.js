@@ -31,7 +31,9 @@ const Viewworkingdays = () => {
       pathname: "/",
     },
     {
-   
+      id: 2,
+      name: "View Working Days and Hours",
+      pathname: "/workingdays/view",
     },
   ];
 
