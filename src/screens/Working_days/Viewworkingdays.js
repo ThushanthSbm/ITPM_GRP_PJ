@@ -156,7 +156,18 @@ const Viewworkingdays = () => {
                     </div>
                      </td>
                     
-                  
+                   <td> <span>{data.name}</span></td>
+                   <td><span>{data.daysnum}</span> </td>
+                   <td> <span>{data.days}</span></td>
+                   <td><span>{data.fromtime}</span></td>
+                   <td><span>{data.totime}</span></td>
+                   <td> <span> {data.hours} </span></td>
+                   <td><span> {data.timeslot}</span></td>                
+                   <td>
+                     <button onClick={(e) => gotoUpdate(data)}>Edit</button>
+                   </td>
+ 
+                   <td>
                      <button onClick={(e) => handleDelete(data)}>Delete</button>
                    </td>
                  </tr>
