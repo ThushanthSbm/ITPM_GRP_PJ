@@ -38,7 +38,45 @@ const ViewParallelSession = () => {
     }
   };
   return (
-
+    <React.Fragment>
+      <div className="ViewParallelSession__searchList">
+        <Search searchData={searchData} />
+        {parallel_sessions.length === 0 ? (
+          <p className="text-danger lead">data is not available</p>
+        ) : sessions.length === 0 ? (
+          <p className="text-danger lead">No results found</p>
+        ) : null}
+      </div>
+      <div className="ViewParallelSession">
+        {sessions.map((data, i) => (
+          <div className="card bg-dark cardStyle" key={i}>
+            <div className="card-body">
+              {data.session.map((res, i) => (
+                <div key={i}>
+                  <h5 className="text-center text-light">{res}</h5>
+                </div>
+              ))}
+              <h5 className="text-center text-light">
+                Start Time : {data.start_time}
+              </h5>
+              <h5 className="text-center text-light">
+                Duration : {data.duration + " "} hrs
+              </h5>
+              <h5 className="text-center text-light">Date : {data.pdate}</h5>
+            </div>
+            <div className="ViewParallelSession__buttons">
+              <button
+                onClick={() =>
+                  db.collection("parallel_sessions").doc(data.id).delete()
+                }
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </React.Fragment>
   );
 };
 
