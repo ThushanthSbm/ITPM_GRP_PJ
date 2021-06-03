@@ -41,6 +41,9 @@ const Viewworkingdays = () => {
     dispatch(viewWorkingdays());
   }, []);
 
+  useEffect(() => {
+    setWorkingdaysData(workingdays);
+  }, [workingdays]);
 
   const Handlebox = (e) => {
     if (e.target.checked) {
