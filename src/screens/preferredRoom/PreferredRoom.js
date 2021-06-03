@@ -138,7 +138,7 @@ const PreferredRoom = () => {
             </p>
           </div>
 
-          <h2 className="text-center text-dark">Add Preffered Room</h2>
+          
           <form id="frm" onSubmit={(e) => submitHandler(e)}>
             <div className="PreferredRoom_inputs">
               <label htmlFor="PreferredRoom" className="text">
