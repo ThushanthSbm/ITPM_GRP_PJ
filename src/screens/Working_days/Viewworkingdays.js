@@ -144,7 +144,18 @@ const Viewworkingdays = () => {
              </thead>
              <tbody>
                  
-           
+               {WorkingdaysData.map((data) => (
+                 <tr key={data.id}>
+                   <td>
+                     <div className="form-check">
+                     <input 
+                     onChange={(e) => Handlebox(e, data)}
+                     type="checkbox"
+                     value={data.id}
+                     className="form-check-input"/>
+                    </div>
+                     </td>
+                    
                    <td> <span>{data.name}</span></td>
                    <td><span>{data.daysnum}</span> </td>
                    <td> <span>{data.days}</span></td>
