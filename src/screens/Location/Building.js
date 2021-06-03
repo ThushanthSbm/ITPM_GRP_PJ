@@ -95,7 +95,20 @@ const Building = () => {
                 </h6>
               ) : null}
             </div>
-            
+            <div className="Building_inputs form-group">
+              <label htmlFor="Building" className="text-light">
+                Building Name
+              </label>
+              <input
+                value={formik.values.building}
+                onChange={formik.handleChange}
+                placeholder="eg:-new building"
+                id="building"
+                name="building"
+                type="text"
+                className="form-control"
+              />
+            </div>
             <div className="error_div error_building">
               {formik.errors.building && formik.touched.building ? (
                 <h6 className={"text-warning text-center"}>
