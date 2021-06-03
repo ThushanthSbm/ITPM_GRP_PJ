@@ -176,19 +176,7 @@ const Viewworkingdays = () => {
            </table>
          )}
 
-         <div className="ViewContainer__bottom">
-           {WorkingdaysData.length > 0 && WorkingdaysData.length === workingdays.length && (
-             <button onClick={DeleteAll} className="btn btn-danger">
-               Delete All
-             </button>
-           )}
-
-           {checkData.length > 0 && (
-             <button onClick={DeleteSelected} className="btn btn-danger">
-               Delete Selected
-             </button>
-           )}
-         </div>
+       
        </React.Fragment>
      )}
    </div>
