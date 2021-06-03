@@ -94,12 +94,7 @@ const Viewworkingdays = () => {
         workingdays
         )
   };
-  const gotoUpdate = (data) => {
-    history.push({
-      pathname: "/workingdays/update",
-      state: data,
-    });
-  };
+  c
 
   return (
     <div className="ViewContainer" >
