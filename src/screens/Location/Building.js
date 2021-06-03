@@ -109,7 +109,14 @@ const Building = () => {
                 className="form-control"
               />
             </div>
-            
+            <div className="error_div error_building">
+              {formik.errors.building && formik.touched.building ? (
+                <h6 className={"text-warning text-center"}>
+                  <i className="fas fa-exclamation"></i>
+                  {formik.errors.building}{" "}
+                </h6>
+              ) : null}
+            </div>
             <div className="Building_buttons">
               <button type="submit" className="btn">
                 Add
