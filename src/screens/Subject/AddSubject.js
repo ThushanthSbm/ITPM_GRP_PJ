@@ -59,20 +59,7 @@ const AddSubject = () => {
         setEvaluation(e.target.value+'hrs')
     }
 
-    const infoSubmit = event =>{
-        event.preventDefault();
-        isClicked(true);
-        dispatch(addSubject(sname,scode,off_year,off_semi,lec_hrs,tut_hrs,lab_hrs,eval_hrs));
-        setCode("");
-        setName("");
-        setOffYear("");
-        setOffSemi("");
-        setLect("");
-        setTutorial("");
-        setLab("");
-        setEvaluation("");
-    }
-
+   
     const navData = [
         {
             id: 1,
