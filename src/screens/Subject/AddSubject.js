@@ -167,59 +167,6 @@ const AddSubject = () => {
                                 required
                             />
                         </div>
-                        <div className="subject_inputs">
-
-                            <label htmlFor="tutorial_hrs">Number of Tutorial hours</label>
-                            <input
-                                placeholder="hrs"
-                                name="tutorial_hrs"
-                                type="text"
-                                className="form-control"
-                                value={tut_hrs}
-                                onChange={handlechangeTutorial}
-                                required
-                            />
-                        </div>
-                        <div className="subject_inputs">
-
-                            <label htmlFor="lab_hrs">Number of Practical hours</label>
-                            <input
-                                placeholder="hrs"
-                                name="lab_hrs"
-                                type="text"
-                                className="form-control"
-                                value={lab_hrs}
-                                onChange={handlechangeLab}
-                                required
-                            />
-                        </div>
-                        <div className="subject_inputs">
-
-                            <label htmlFor="evaluation_hrs">Number of Evaluation hours</label>
-                            <input
-                                placeholder="hrs"
-                                name="evaluation_hrs"
-                                type="text"
-                                className="form-control"
-                                value={eval_hrs}
-                                onChange={handlechangeEvaluation}
-                                required
-                            />
-                        </div>
-                        <div className="subject_buttons">
-                            <button type="button" className="btn">
-                                Clear
-                            </button>
-                            <button type="submit" className="btn" disabled={!scode}>
-                                Add
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-    )
-}
+                        
 
 export default AddSubject
