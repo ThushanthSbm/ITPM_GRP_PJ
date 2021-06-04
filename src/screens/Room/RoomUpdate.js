@@ -92,7 +92,18 @@ const Room = (props) => {
               />
             </div>
 
-            
+            <div className="roomUpdate_inputs">
+              <label htmlFor="capacity">Capacity</label>
+              <input
+                placeholder="150"
+                name="capacity"
+                type="text"
+                className="form-control"
+                value={formik.values.capacity}
+                onChange={formik.handleChange}
+                required
+              />
+            </div>
 
             <div className="roomUpdate_inputs">
               <label htmlFor="building">Building</label>
