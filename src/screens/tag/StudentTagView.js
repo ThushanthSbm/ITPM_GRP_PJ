@@ -117,58 +117,7 @@ const StudentView = () => {
   };
 
   return (
-    <div className="TagViewContainer">
-      <div className="TagViewContainer__nav">
-        <ScreenNav rightNavData={navData} />
-      </div>
-      <div className="container table-responsive-lg ">
-        {loading ? (
-          <Spinner Loader={DotLoader} size={30} />
-        ) : (
-          <React.Fragment>
-            <div className="TagViewContainer__top">
-              <button
-                onClick={(e) =>
-                  history.push({
-                    pathname: "/student/tag/add",
-                  })
-                }
-                className="btn btn-dark btn_new"
-              >
-                Add new record
-              </button>
-              <Search searchData={searchData} />
-            </div>
-            {tags.length === 0 ? (
-              <p className="text-danger lead">data is not available</p>
-            ) : userData?.length === 0 ? (
-              <p className="text-danger lead">No results found</p>
-            ) : null}
-            {userData.length > 0 && (
-              <StudentTagTable
-                userData={userData}
-                Handlebox={Handlebox}
-                handleDelete={handleDelete}
-                gotoUpdatePage={gotoUpdatePage}
-              />
-            )}
-
-            <div className="TagViewContainer__bottom">
-              {checkData.length > 0 && (
-                <button onClick={DeleteSelected} className="btn btn-danger">
-                  Delete Selected
-                </button>
-              )}
-              {userData.length > 0 && userData.length === tags.length && (
-                <button onClick={DeleteAll} className="btn btn-danger">
-                  Delete All
-                </button>
-              )}
-            </div>
-          </React.Fragment>
-        )}
-      </div>
-    </div>
+    
   );
 };
 
