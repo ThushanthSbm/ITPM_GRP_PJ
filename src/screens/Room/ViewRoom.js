@@ -131,7 +131,7 @@ const ViewRoom = () => {
                     <th>Building</th>
                     <th>Type</th>
                     <th>Action</th>
-                    
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
