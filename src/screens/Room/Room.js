@@ -132,7 +132,14 @@ const Room = () => {
               >
                 Add
               </button>
-              
+              <button
+                onClick={() => {
+                  history.push("/room/room/view");
+                }}
+                className="btn"
+              >
+                View
+              </button>
             </div>
           </form>
         </div>
