@@ -15,7 +15,11 @@
     outline: none;
 }
 
-
+.RoomViewContainer__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
 .RoomViewContainer__table button {
     color: white;
     background-image: linear-gradient(to right, #fc6076, #ff9231);
