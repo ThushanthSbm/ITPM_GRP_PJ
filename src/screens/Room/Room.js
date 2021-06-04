@@ -76,18 +76,7 @@ const Room = () => {
               />
             </div>
 
-            <div className="room_inputs">
-              <label htmlFor="capacity">Capacity</label>
-              <input
-                placeholder="eg:-150"
-                name="capacity"
-                type="text"
-                className="form-control"
-                value={formik.values.capacity}
-                onChange={formik.handleChange}
-                required
-              />
-            </div>
+            
 
             <div className="room_inputs">
               <label htmlFor="building">Building</label>
