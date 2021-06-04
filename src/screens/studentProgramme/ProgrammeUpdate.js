@@ -58,7 +58,55 @@ const ProgrammeUpdate = (props) => {
   ];
 
   return (
-    
+    <div className="programmeUpdate">
+      <ScreenNav rightNavData={navData} />
+      <div className="programmeUpdate__container">
+        <div className="programmeUpdate__box">
+          <div className="lead text-success programmeUpdate__message">
+            {loading && clicked && <Spinner Loader={DotLoader} size={30} />}
+            <p className={`lead ${error ? "text-danger" : "text-success"}`}>
+              {!loading && !error && success}
+              {!loading && error && error}
+            </p>
+          </div>
+
+          <h2 className="text-center text-dark">Update programme</h2>
+          <form id="frm" onSubmit={(e) => submitHandler(e)}>
+            <div className="programmeUpdate_inputs">
+              <label htmlFor="programmeUpdate" className="text">
+                programme
+              </label>
+              <input
+                value={programme}
+                onChange={(e) => setProgramme(e.target.value)}
+                placeholder="eg:IT"
+                id="programme"
+                type="text"
+                className="form-control"
+                required
+              />
+            </div>
+            <div className="programmeUpdate_buttons">
+              <button type="submit" className="btn" disabled={!programme}>
+                Update
+              </button>
+              <button
+                type="button"
+                className="btn"
+                onClick={(e) => {
+                  history.push({ pathname: "/student/programme/view" });
+                }}
+              >
+                Cancel
+              </button>
+              <button type="button" onClick={clearInput} className="btn">
+                Clear
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 };
 
