@@ -58,55 +58,7 @@ const StudentTagUpdate = (props) => {
   ];
 
   return (
-    <div className="StudentTagUpdate">
-      <ScreenNav rightNavData={navData} />
-      <div className="StudentTagUpdate__container">
-        <div className="StudentTagUpdate__box">
-          <div className="lead text-success StudentTagUpdate__message">
-            {loading && clicked && <Spinner Loader={DotLoader} size={30} />}
-            <p className={`lead ${error ? "text-danger" : "text-success"}`}>
-              {!loading && !error && success}
-              {!loading && error && error}
-            </p>
-          </div>
-
-          <h2 className="text-center text-dark">Update Tag</h2>
-          <form id="frm" onSubmit={(e) => submitHandler(e)}>
-            <div className="StudentTagUpdate_inputs">
-              <label htmlFor="StudentTagUpdates" className="text">
-                Tag
-              </label>
-              <input
-                value={tag}
-                onChange={(e) => setTag(e.target.value)}
-                placeholder="eg:S1.Y3"
-                id="StudentTagUpdates"
-                type="text"
-                className="form-control"
-                required
-              />
-            </div>
-            <div className="StudentTagUpdate_buttons">
-              <button type="submit" className="btn" disabled={!tag}>
-                Update
-              </button>
-              <button
-                type="button"
-                className="btn"
-                onClick={(e) => {
-                  history.push({ pathname: "/student/tag/view" });
-                }}
-              >
-                Cancel
-              </button>
-              <button type="button" onClick={clearInput} className="btn">
-                Clear
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+  
   );
 };
 
