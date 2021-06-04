@@ -61,7 +61,7 @@ const Room = () => {
               {!loading && error && error}
             </p>
           </div>
-          <h2 className="text-center text-dark">Add Room Details</h2>
+          
           <form id="myForm" onSubmit={formik.handleSubmit} autoComplete="off">
             <div className="room_inputs">
               <label htmlFor="name">Room Name</label>
