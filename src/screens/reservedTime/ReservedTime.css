@@ -9,14 +9,7 @@
   padding: 5px;
 }
 
-.ReservedTime__box {
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .ReservedTime__message {
   height: 30px;
