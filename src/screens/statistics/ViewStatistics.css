@@ -21,7 +21,10 @@
   margin-top: -100px;
   flex: 0.5;
 }
-
+.StatisticContainer__form {
+  flex: 0.2;
+  margin: 5px;
+}
 
 .view_statistics {
   flex: 0.3;
