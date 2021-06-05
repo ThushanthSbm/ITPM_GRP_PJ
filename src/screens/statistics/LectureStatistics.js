@@ -73,10 +73,7 @@ const ViewStatistics = () => {
           No of lecturers in Business:
           {lecturer.filter((data) => data.faculty === "Business").length}
         </p>
-        <p class="lead">
-          No of lecturers in Nursing:
-          {lecturer.filter((data) => data.faculty === "Nursing").length}
-        </p>
+        
       </div>
       <div className="StatisticContainer__chart">
         <PieChart
