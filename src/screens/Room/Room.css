@@ -44,13 +44,7 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-.room_inputs {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
-  width:350px
-}
+
 
 
 .room_inputs > label {
