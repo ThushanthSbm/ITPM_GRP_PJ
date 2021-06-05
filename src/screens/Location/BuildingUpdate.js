@@ -114,7 +114,9 @@ const BuildingUpdate = (props) => {
               ) : null}
             </div>
             <div className="BuildingUpdate_inputs form-group">
-              
+              <label htmlFor="building" className="text-light">
+              Building
+              </label>
               <input
                 value={formik.values.building}
                 onChange={formik.handleChange}
