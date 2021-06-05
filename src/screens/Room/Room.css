@@ -57,9 +57,7 @@
   width: 200px;
 }
 
-.room_buttons {
-  display: flex;
-}
+
 
 .room_buttons button {
   color: white;
