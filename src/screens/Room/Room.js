@@ -105,21 +105,7 @@ const Room = () => {
               </select>
             </div>
 
-            <div className="room_inputs">
-              <label htmlFor="type">Type</label>
-              <select
-                className="form-control"
-                onChange={formik.handleChange}
-                name="type"
-                value={formik.values.type}
-                required
-              >
-                <option value="">None</option>
-                <option value="lab">Laboratory</option>
-                <option value="lecture">Lecture</option>
-                <option value="tutorial">Tutorial</option>
-              </select>
-            </div>
+            
 
             <div className="room_buttons">
               <button type="button" className="btn">
