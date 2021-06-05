@@ -18,9 +18,6 @@
     align-items: center;
 }
 
-.session__message {
-    height: 30px;
-}
 
 .session__error_message {
     height: 15px;
