@@ -9,7 +9,12 @@ const BuildingTable = ({
   return (
     <table className="table table-dark table-hover locationContainer__table">
       <thead>
-        
+        <tr>
+          <th>Building</th>
+          <th>Center</th>
+          <th>Action</th>
+          <th>Action</th>
+        </tr>
       </thead>
       <tbody>
         {userData.map((data) => (
