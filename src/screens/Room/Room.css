@@ -18,9 +18,7 @@
   align-items: center;
 }
 
-.room__message {
-  height: 30px;
-}
+
 
 .room__error_message {
   height: 15px;
